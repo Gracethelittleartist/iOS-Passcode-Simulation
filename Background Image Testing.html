@@ -1,74 +1,46 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-<title>Page Title</title>
- 
-<style>
-body {
-        background-image: url("Passcode Screen Unlock Finl Testing.jpg");
-} 
- 
-</style>
- <!DOCTYPE html>
-<html>
-<body>
+   <head>
+      <title>change picture</title>
+      <script type = "text/javascript">
+          function displayNextImage() {
+              x = (x === images.length) ? images.length-1 : x + 1;
+              if(x === images.length)clearInterval(clear);
+              document.getElementById("img").src = images[x];
 
-    <script language="JavaScript" type="text/javascript">
+          }
 
-        var noOfInputs = 0;
-        function buttons_click() {
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
 
-            noOfInputs++;
+          var images = [], x = -1;
+          images[0] = "images/Flip Slideshow/Flip1.jpg";
+          images[1] = "images/Flip Slideshow/Flip2.jpg";
+          images[2] = "images/Flip Slideshow/Flip3.jpg";
+          images[3] = "images/Flip Slideshow/Flip4.jpg";
+          images[4] = "images/Flip Slideshow/Flip5.jpg";
+          images[5] = "images/Flip Slideshow/Flip6.jpg";
+          images[6] = "images/Flip Slideshow/Flip7.jpg";
+          images[7] = "images/Flip Slideshow/Flip8.jpg";
+          images[8] = "images/Flip Slideshow/Flip9.jpg";
+          images[9] = "images/Flip Slideshow/Flip10.jpg";
+          images[10] = "images/Flip Slideshow/Flip11.jpg";
 
-            if (noOfInputs === 0) {
-                window.document.getElementById('myImage').src = "Passcode0.jpg";
-            }
 
-            if (noOfInputs === 1) {
-                window.document.getElementById('myImage').src = "Passcode1.jpg";
-            }
 
-            if (noOfInputs === 2) {
-                window.document.getElementById('myImage').src = "Passcode2.jpg";
-            }
+          window.setInterval(function(){
+          displayNextImage();
+          }, 100);
 
-            if (noOfInputs === 3) {
-                window.document.getElementById('myImage').src = "Passcode3.jpg";
-            }
-         
-            if (noOfInputs === 4) {
-                window.document.getElementById('myImage').src = "Passcode4.jpg";
-                
-                setTimeout(function(){
-    			           	window.document.getElementById('myImage').src = "ipad-home-screen.jpg"; 
-    				        }, 1000);
-				}
-            }
 
-        }
+      </script>
+   </head>
 
-    </script>
+   <body onload = "startTimer()">
+       <img id="img" src="images/Halfway.jpg"/>
 
-    <button onclick="buttons_click()">1</button>
-    <button onclick="buttons_click()">2</button>
-    <button onclick="buttons_click()">3</button>
-    <button onclick="buttons_click()">4</button>
-    <button onclick="buttons_click()">5</button>
-    <button onclick="buttons_click()">6</button>
-    <button onclick="buttons_click()">7</button>
-    <button onclick="buttons_click()">8</button>
-    <button onclick="buttons_click()">9</button>
-    <button onclick="buttons_click()">0</button>
 
-    <img id="myImage" src="Passcode0.jpg" style="width: 400px">
-
-    <button onclick="document.getElementById('myImage').src='Passcode0.jpg';noOfInputs=0;">Cancel</button>
-
-</body>
-</html>
-</head>
- 
-<body>
- 
-</body>
+   </body>
 </html>
