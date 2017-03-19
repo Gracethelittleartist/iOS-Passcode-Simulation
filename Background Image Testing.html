@@ -9,7 +9,47 @@ body {
 } 
  
 </style>
- 
+ <!DOCTYPE html>
+<html>
+<body>
+
+    <script language="JavaScript" type="text/javascript">
+
+        var noOfInputs = 0;
+        function buttons_click() {
+
+            noOfInputs++;
+
+            if (noOfInputs === 0) {
+                window.document.getElementById('myImage').src = "Passcode0.jpg";
+            }
+
+            if (noOfInputs === 1) {
+                window.document.getElementById('myImage').src = "Passcode1.jpg";
+            }
+
+            if (noOfInputs === 2) {
+                window.document.getElementById('myImage').src = "Passcode2.jpg";
+            }
+
+            if (noOfInputs === 3) {
+                window.document.getElementById('myImage').src = "Passcode3.jpg";
+            }
+
+        }
+
+    </script>
+
+    <button onclick="buttons_click()">1</button>
+    <button onclick="buttons_click()">2</button>
+    <button onclick="buttons_click()">3</button>
+
+    <img id="myImage" src="Passcode0.jpg" style="width: 400px">
+
+    <button onclick="document.getElementById('myImage').src='Passcode0.jpg';noOfInputs=0;">Cancel</button>
+
+</body>
+</html>
 </head>
  
 <body>
