@@ -35,6 +35,15 @@ body {
             if (noOfInputs === 3) {
                 window.document.getElementById('myImage').src = "Passcode3.jpg";
             }
+         
+            if (noOfInputs === 4) {
+                window.document.getElementById('myImage').src = "Passcode4.jpg";
+                
+                setTimeout(function(){
+    			           	window.document.getElementById('myImage').src = "ipad-home-screen.jpg"; 
+    				        }, 1000);
+				}
+            }
 
         }
 
@@ -43,6 +52,13 @@ body {
     <button onclick="buttons_click()">1</button>
     <button onclick="buttons_click()">2</button>
     <button onclick="buttons_click()">3</button>
+    <button onclick="buttons_click()">4</button>
+    <button onclick="buttons_click()">5</button>
+    <button onclick="buttons_click()">6</button>
+    <button onclick="buttons_click()">7</button>
+    <button onclick="buttons_click()">8</button>
+    <button onclick="buttons_click()">9</button>
+    <button onclick="buttons_click()">0</button>
 
     <img id="myImage" src="Passcode0.jpg" style="width: 400px">
 
